@@ -1,10 +1,9 @@
 plugins {
-    `java-library`
-    `maven-publish`
+    id("java")
 }
 
 group = "com.github.HektorTM"
-version = "v1.0.8"
+version = "v1.0.9"
 
 java {
     // Target server-compatible bytecode
@@ -27,4 +26,8 @@ dependencies {
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
+}
+
+tasks.test {
+    useJUnitPlatform()
 }
