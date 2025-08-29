@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.HektorTM"
-version = "v1.1.1"
+version = "v1.1.2"
 
 java {
     // Target server-compatible bytecode
@@ -36,7 +36,7 @@ tasks.test {
 publishing {
     publications {
         create<MavenPublication>("maven") {
-            groupId = "dev.hektortm"
+            groupId = "com.github.hektortm"
             artifactId = "permissionlib"
             version = "v1.1.1"
         }
