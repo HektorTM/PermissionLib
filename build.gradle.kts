@@ -3,8 +3,8 @@ plugins {
     `maven-publish`
 }
 
-group = "dev.hektortm"
-version = "v1.0.7"      // JitPack uses your git tag as the public version
+group = "com.github.HektorTM"
+version = "v1.0.8"
 
 java {
     // Target server-compatible bytecode
