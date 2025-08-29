@@ -1,32 +1,28 @@
 plugins {
-    id("java")
+    `java-library`
+    `maven-publish`
 }
 
-group = "dev.hektortm"
-version = "1.0.3"
+group = "dev.hektortm"          // JitPack will still publish as com.github.<you>
+version = "1.0.4"               // JitPack uses your git tag as the public version
 
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    // Target server-compatible bytecode
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
     withSourcesJar()
     withJavadocJar()
 }
 
 repositories {
-    maven {
-        name = "papermc"
-        url = uri("https://repo.papermc.io/repository/maven-public/")
-    }
-
+    mavenCentral()
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.8-R0.1-SNAPSHOT")
+    // Compile against Paper API. (Or swap to spigot-api:1.20.4 for broader compat.)
+    compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
 }
 
 tasks.withType<JavaCompile> {
     options.encoding = "UTF-8"
-}
-
-tasks.test {
-    useJUnitPlatform()
 }
