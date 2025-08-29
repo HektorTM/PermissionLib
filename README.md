@@ -1,6 +1,5 @@
 # `PermissionLib`
-[![Release](https://jitpack.io/v/HektorTM/permissionlib.svg)]
-(https://jitpack.io/#HektorTM/permissionlib)
+[![Release](https://jitpack.io/v/HektorTM/permissionlib.svg)](https://jitpack.io/#HektorTM/permissionlib)
 
 
 `PermissionLib` is a library designed to dynamically create Permissions without having to write them in the plugin.yml
