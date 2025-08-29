@@ -1,9 +1,10 @@
 plugins {
     id("java")
+    id("maven-publish")
 }
 
 group = "com.github.HektorTM"
-version = "v1.0.9"
+version = "v1.1.0"
 
 java {
     // Target server-compatible bytecode
@@ -30,4 +31,14 @@ tasks.withType<JavaCompile> {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "dev.hektortm"
+            artifactId = "permissionlib"
+            version = project.version.toString()
+        }
+    }
 }
