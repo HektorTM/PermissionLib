@@ -3,8 +3,8 @@ plugins {
     `maven-publish`
 }
 
-group = (findProperty("group") as String?) ?: "dev.hektortm"
-version = (findProperty("version") as String?) ?: "v1.0.6"      // JitPack uses your git tag as the public version
+group = "dev.hektortm"
+version = "v1.0.7"      // JitPack uses your git tag as the public version
 
 java {
     // Target server-compatible bytecode
@@ -14,8 +14,10 @@ java {
 }
 
 repositories {
-    mavenCentral()
-    maven("https://repo.papermc.io/repository/maven-public/")
+    maven {
+        name = "papermc"
+        url = uri("https://repo.papermc.io/repository/maven-public/")
+    }
 }
 
 dependencies {
