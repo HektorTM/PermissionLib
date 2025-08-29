@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "dev.hektortm"          // JitPack will still publish as com.github.<you>
-version = "1.0.2"               // JitPack uses your git tag as the public version
+version = "1.0.3"               // JitPack uses your git tag as the public version
 
 java {
     // Target server-compatible bytecode
