@@ -17,7 +17,7 @@ public class PermissionRegistry {
         this.createWildcards = createWildcards;
         this.wildcardDefault = wildcardDefault == null ? PermissionDefault.FALSE : wildcardDefault;
     }
-
+    // Builder
     public static Builder builder() {
         return new Builder();
     }
